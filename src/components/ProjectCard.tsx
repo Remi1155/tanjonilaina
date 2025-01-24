@@ -17,7 +17,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   liveDemoLink,
 }) => {
   return (
-    <div className="flex flex-col items-center justify-between h-full p-4 bg-gray-100 border border-gray-300 rounded-lg shadow-lg md:w-full">
+    <div className="flex flex-col items-center justify-between w-full h-full p-4 bg-gray-100 border border-gray-300 rounded-lg shadow-lg md:w-full">
       <div className="w-full h-48 mb-4 overflow-hidden rounded-lg">
         <img
           src={imageUrl}
