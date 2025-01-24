@@ -9,7 +9,7 @@ const AboutSection: React.FC = () => {
   return (
     <section
       id="about"
-      className="flex flex-col justify-center w-screen min-h-screen py-4 bg-gray-50"
+      className="flex flex-col justify-center w-full min-h-screen py-4 bg-gray-50"
     >
       <TitleSection lowerText="About me" upperText="Get to know more" />
       <div className="flex flex-col items-center w-[92%] md:w-4/5 mx-auto mt-10 lg:w-3/4 lg:flex-row lg:justify-between">
@@ -17,7 +17,7 @@ const AboutSection: React.FC = () => {
           <img
             src={AboutPic}
             alt="Image 2"
-            className="object-cover w-36 h-36 min-[400px]:w-48 min-[400px]:h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-96 lg:h-96"
+            className="object-cover w-36 h-36 min-[400px]:w-48 min-[400px]:h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-96 lg:h-96 max-w-full"
           />
         </div>
         <div className="mt-4 lg:w-1/2">

@@ -11,9 +11,9 @@ import Footer from "./components/Footer";
 
 export default function App() {
   return (
-    <div className="font-sans text-gray-900">
+    <div className="w-screen font-sans text-gray-900">
       <Header />
-      <main className="">
+      <main className="w-full">
         <WelcomeSection />
         <AboutSection />
         <ExperienceSection />
