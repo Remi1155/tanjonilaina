@@ -36,7 +36,7 @@ const ExperienceSection: React.FC = () => {
   ];
 
   return (
-    <section id="experience" className="container w-full py-4 bg-gray-50">
+    <section id="experience" className="container w-screen py-4 bg-gray-50">
       <div className="container items-center w-[92%] sm:w-4/5 mx-auto text-center lg:w-3/4">
         <TitleSection lowerText="Experience" upperText="Explore my" />
         <div className="flex flex-col justify-between gap-4 mt-4 text-lg md:text-xl md:flex-row">
