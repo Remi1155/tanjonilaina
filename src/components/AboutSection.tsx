@@ -6,6 +6,25 @@ import ExperienceLogo from "../assets/experience.png";
 import EducationLogo from "../assets/education.png";
 
 const AboutSection: React.FC = () => {
+  const data = [
+    {
+      title: "Experience",
+      logo: ExperienceLogo,
+      items: [
+        "2 years of Frontend Development",
+        "1 year of Backend Development",
+      ],
+    },
+    {
+      title: "Education",
+      logo: EducationLogo,
+      items: [
+        "2 years of Frontend Development",
+        "1 year of Backend Development",
+      ],
+    },
+  ];
+
   return (
     <section
       id="about"
@@ -22,23 +41,14 @@ const AboutSection: React.FC = () => {
         </div>
         <div className="mt-4 lg:w-1/2">
           <div className="flex flex-col items-center justify-center gap-4 mt-8 mb-4 lg:mt-0 md:flex-row md:gap-8 md:h-60">
-            <AboutMeCard
-              imageUrl={ExperienceLogo}
-              title="Experience"
-              items={[
-                "2 years of Frontend Development",
-                "1 year of Backend Development",
-              ]}
-            />
-            <AboutMeCard
-              imageUrl={EducationLogo}
-              title="Education"
-              items={[
-                "B.Sc. Mathematics",
-                "B.Sc. Computer Science",
-                "M.Sc. Computer Science (1st year)",
-              ]}
-            />
+            {data.map((i, index) => (
+              <AboutMeCard
+                key={index}
+                title={i.title}
+                imageUrl={i.logo}
+                items={i.items}
+              />
+            ))}
           </div>
           <p className="text-justify">
             I am a passionate web developer currently in my 4th year of Computer

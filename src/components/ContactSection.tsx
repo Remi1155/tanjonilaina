@@ -17,6 +17,7 @@ const ContactSection: React.FC = () => {
       href: "https://www.linkedin.com/in/r%C3%A9mi-xavier-tanjonilaina-0958a42b5/",
     },
   ];
+  
   return (
     <section id="contact" className="container w-full py-4 mx-auto bg-gray-50">
       <div className="items-center w-[92%] sm:w-4/5 mx-auto text-center md:w-3/4">

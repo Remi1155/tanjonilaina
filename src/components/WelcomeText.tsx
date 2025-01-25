@@ -1,6 +1,7 @@
 import GithubPng from "../assets/github.png";
 import LinkedinPng from "../assets/linkedin.png";
 import CustomLinkButton from "./CustomLinkButton";
+import Cv from "../assets/CV.pdf"
 
 function WelcomeText() {
   return (
@@ -15,7 +16,7 @@ function WelcomeText() {
         Fullstack Developer
       </p>
       <div className="flex my-3">
-        <CustomLinkButton href="#" text="Download CV" />
+        <CustomLinkButton href={Cv} text="Download CV" />
         <CustomLinkButton
           href="#"
           text="Contact Me"
