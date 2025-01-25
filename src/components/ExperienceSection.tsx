@@ -11,7 +11,7 @@ const ExperienceSection: React.FC = () => {
         "Redux",
         "TailwindCss",
         "TypeScript",
-        "Material UI",
+        "MaterialUI",
         "JavaScript",
       ],
       levels: [
@@ -25,7 +25,7 @@ const ExperienceSection: React.FC = () => {
     },
     {
       title: "Backend Development",
-      technologies: ["Nest JS", "PostgreSQL", "PHP", "MySQL", "Node JS"],
+      technologies: ["NestJS", "PostgreSQL", "PHP", "MySQL", "NodeJS"],
       levels: [
         "Intermediate",
         "Basic",
