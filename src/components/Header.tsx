@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Logo from "../assets/logo_4.png"
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,9 +16,11 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className="w-screen bg-gray-100">
+    <header className="container w-full mx-auto bg-gray-100">
       <div className="z-50 flex items-center justify-between w-3/4 py-4 mx-auto md:py-7">
-        <div className="text-2xl font-medium sm:text-3xl">XT</div>
+        <div className="">
+          <img src={Logo} alt="logo" className="w-28" />
+        </div>
         <nav className="container flex items-center justify-between w-fit ">
           <div>
             <div className="lg:hidden">

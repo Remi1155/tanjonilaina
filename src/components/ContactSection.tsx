@@ -18,7 +18,7 @@ const ContactSection: React.FC = () => {
     },
   ];
   return (
-    <section id="contact" className="w-full py-4 bg-gray-50">
+    <section id="contact" className="container w-full py-4 mx-auto bg-gray-50">
       <div className="items-center w-[92%] sm:w-4/5 mx-auto text-center md:w-3/4">
         <TitleSection lowerText="Contact me" upperText="Get in touch" />
         <div className="flex flex-col w-full gap-3 p-4 my-4 bg-gray-100 border border-gray-300 rounded-lg shadow-lg sm:flex-row sm:justify-around sm:items-center sm:gap-6">
