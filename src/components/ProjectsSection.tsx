@@ -12,7 +12,7 @@ const ProjectsSection: React.FC = () => {
       projectName: "Manage-landing-page",
       description: "A fully responsive landing page template created with React and TypeScript.",
       githubLink: "https://github.com/Remi1155/Manage-landing-page",
-      liveDemoLink: "https://example1.com",
+      liveDemoLink: "#",
     },
     {
       imageUrl: Project2Img,
