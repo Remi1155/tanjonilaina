@@ -1,14 +1,20 @@
 import GithubPng from "../assets/github.png";
 import LinkedinPng from "../assets/linkedin.png";
-import TitleSection from "./TitleSection";
 import CustomLinkButton from "./CustomLinkButton";
 
 function WelcomeText() {
   return (
     <div className="flex flex-col items-center gap-2 p-4 text-center rounded-full bg-gray-50">
-      <TitleSection upperText="Hello, I'm" lowerText="Tanjonilaina Rémi" />
-      <p className="text-2xl font-bold text-gray-700">Fullstack Developer</p>
-      <div className="my-3">
+      <div className="text-center">
+        <p className="text-gray-600 min-[1400px]:text-2xl">Hello, I'm</p>
+        <h2 className="mt-1 text-3xl min-[400px]:text-4xl font-bold text-black min-[1400px]:text-5xl">
+          Tanjonilaina Rémi
+        </h2>
+      </div>
+      <p className="text-2xl font-bold text-gray-700 min-[1400px]:text-4xl">
+        Fullstack Developer
+      </p>
+      <div className="flex my-3">
         <CustomLinkButton href="#" text="Download CV" />
         <CustomLinkButton
           href="#"
