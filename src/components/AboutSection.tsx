@@ -19,8 +19,9 @@ const AboutSection: React.FC = () => {
       title: "Education",
       logo: EducationLogo,
       items: [
-        "2 years of Frontend Development",
-        "1 year of Backend Development",
+        "B.Sc. Mathematics",
+        "B.Sc. Computer Science",
+        "M.Sc. Computer Science (1st year)",
       ],
     },
   ];
