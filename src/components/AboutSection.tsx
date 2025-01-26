@@ -29,7 +29,7 @@ const AboutSection: React.FC = () => {
   return (
     <section
       id="about"
-      className="container flex flex-col justify-center w-full min-h-screen py-4 mx-auto bg-gray-50"
+      className="container flex flex-col justify-center w-full py-4 mx-auto bg-gray-50"
     >
       <TitleSection lowerText="About me" upperText="Get to know more" />
       <div className="flex flex-col items-center w-[92%] md:w-4/5 mx-auto mt-10 lg:w-3/4 lg:flex-row lg:justify-between">

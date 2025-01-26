@@ -1,6 +1,7 @@
 import GithubPng from "../assets/github.png";
 import LinkedinPng from "../assets/linkedin.png";
 import CustomLinkButton from "./CustomLinkButton";
+import WatsappPng from "../assets/icons8-whatsapp-30.png"
 
 function WelcomeText() {
   return (
@@ -29,6 +30,9 @@ function WelcomeText() {
         </a>
         <a href="https://github.com/Remi1155">
           <img src={GithubPng} alt="Github png" className="w-10" />
+        </a>
+        <a href="https://wa.me/+261337196003">
+          <img src={WatsappPng} alt="Watsapp png" className="w-10" />
         </a>
       </div>
     </div>

@@ -3,6 +3,7 @@ import TitleSection from "./TitleSection";
 import LinkdinLogo from "../assets/linkedin.png";
 import EmailLogo from "../assets/email.png";
 import SocialNetwork from "./SocialNetwork";
+import WatsappLogo from "../assets/icons8-whatsapp-30.png"
 
 const ContactSection: React.FC = () => {
   const socialNetworks = [
@@ -11,6 +12,12 @@ const ContactSection: React.FC = () => {
       name: "Email",
       href: "mailto:xavitanjonilaina2@gmail.com",
     },
+    {
+      imageUrl: WatsappLogo,
+      name: "Watsapp",
+      href: "https://wa.me/+261337196003",
+    },
+
     {
       imageUrl: LinkdinLogo,
       name: "Linkedin",
@@ -22,7 +29,7 @@ const ContactSection: React.FC = () => {
     <section id="contact" className="container w-full py-4 mx-auto bg-gray-50">
       <div className="items-center w-[92%] sm:w-4/5 mx-auto text-center md:w-3/4">
         <TitleSection lowerText="Contact me" upperText="Get in touch" />
-        <div className="flex flex-col w-full gap-3 p-4 my-4 bg-gray-100 border border-gray-300 rounded-lg shadow-lg sm:flex-row sm:justify-around sm:items-center sm:gap-6">
+        <div className="flex flex-wrap justify-around w-full gap-3 p-4 my-4 bg-gray-100 border border-gray-300 rounded-lg shadow-lg">
           {socialNetworks.map((socialNetwork, index) => (
             <SocialNetwork
               key={index}
