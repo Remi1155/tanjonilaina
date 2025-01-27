@@ -13,7 +13,7 @@ function WelcomeText() {
         </h2>
       </div>
       <p className="text-2xl font-bold text-gray-700 min-[1400px]:text-4xl">
-        Fullstack Developer
+        Developer
       </p>
       <div className="flex my-3">
         <CustomLinkButton href="#" text="Download CV" />
