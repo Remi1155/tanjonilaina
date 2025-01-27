@@ -16,13 +16,17 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className="fixed w-full mx-auto bg-white">
-      <div className="container mx-auto bg-gray-100 backdrop-blur bg-opacity-80">
-        <div className="container z-50 flex items-center justify-between w-3/4 py-4 mx-auto md:py-5">
-          <div className="">
+    <header className="fixed z-50 w-full">
+      {/* Le conteneur global */}
+      <div className="relative">
+        {/* Contexte de flou uniquement pour le fond */}
+        <div className="container absolute inset-0 mx-auto bg-gray-100 bg-opacity-60 backdrop-blur-md"></div>
+        {/* Contenu net au-dessus du fond */}
+        <div className="relative z-10 flex items-center justify-between w-3/4 py-4 mx-auto">
+          <div>
             <img src={Logo} alt="logo" className="w-28" />
           </div>
-          <nav className="container flex items-center justify-between w-fit ">
+          <nav className="flex items-center space-x-6">
             <div>
               <div className="lg:hidden">
                 <button
@@ -64,7 +68,7 @@ const Header: React.FC = () => {
               </div>
 
               <ul
-                className={`absolute lg:relative top-16 lg:top-0 right-14 min-[400px]:right-20 sm:right-28 md:right-32 lg:right-0 w-auto rounded-md bg-gray-50 p-3 border border-t-gray-100 lg:border-none text-center  lg:w-auto lg:bg-transparent lg:flex lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-6 transition-all duration-300 ease-in-out ${
+                className={`absolute lg:relative top-16 lg:top-0 right-14 min-[400px]:right-20 sm:right-28 md:right-32 lg:right-0 w-auto rounded-md bg-gray-50 p-3 border border-t-gray-100 lg:border-none text-center lg:w-auto lg:bg-transparent lg:flex lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-6 transition-all duration-300 ease-in-out ${
                   isOpen ? "block" : "hidden"
                 }`}
               >
