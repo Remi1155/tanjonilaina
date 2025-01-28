@@ -68,7 +68,7 @@ const Header: React.FC = () => {
               </div>
 
               <ul
-                className={`absolute lg:relative top-16 lg:top-0 right-14 min-[400px]:right-20 sm:right-28 md:right-32 lg:right-0 w-auto rounded-md bg-gray-50 p-3 border border-t-gray-100 lg:border-none text-center lg:w-auto lg:bg-transparent lg:flex lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-6 transition-all duration-300 ease-in-out ${
+                className={`absolute lg:relative top-16 lg:top-0 right-3 lg:right-0 w-auto rounded-md bg-gray-50 p-3 border border-t-gray-100 lg:border-none text-center lg:w-auto lg:bg-transparent lg:flex lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-6 transition-all duration-300 ease-in-out ${
                   isOpen ? "block" : "hidden"
                 }`}
               >
@@ -76,7 +76,7 @@ const Header: React.FC = () => {
                   <li key={index}>
                     <a
                       href={navLink.href}
-                      className="text-2xl font-medium hover:text-gray-500 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-gray-500 after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full"
+                      className="text-xl font-medium lg:font-semibold hover:text-gray-500 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-gray-500 after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full"
                       onClick={toggleMenu}
                     >
                       {navLink.label}

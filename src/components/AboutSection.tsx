@@ -11,7 +11,7 @@ const AboutSection: React.FC = () => {
       title: "Experience",
       logo: ExperienceLogo,
       items: [
-        "2 years of Frontend Development",
+        "1 year of Frontend Development",
         "1 year of Backend Development",
       ],
     },
