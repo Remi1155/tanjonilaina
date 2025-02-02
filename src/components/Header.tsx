@@ -20,7 +20,7 @@ const Header: React.FC = () => {
       {/* Le conteneur global */}
       <div className="relative">
         {/* Contexte de flou uniquement pour le fond */}
-        <div className="container absolute inset-0 mx-auto bg-gray-100 bg-opacity-60 backdrop-blur-md"></div>
+        <div className="container absolute inset-0 mx-auto bg-gray-100 dark:bg-gray-950 dark:bg-opacity-60 bg-opacity-60 dark:backdrop-blur-md backdrop-blur-md"></div>
         {/* Contenu net au-dessus du fond */}
         <div className="relative z-10 flex items-center justify-between w-3/4 py-4 mx-auto">
           <div>
@@ -68,8 +68,8 @@ const Header: React.FC = () => {
               </div>
 
               <ul
-                className={`absolute lg:relative top-16 lg:top-0 right-3 lg:right-0 w-auto rounded-md bg-gray-50 p-3 border border-t-gray-100 lg:border-none text-center lg:w-auto lg:bg-transparent lg:flex lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-6 transition-all duration-300 ease-in-out ${
-                  isOpen ? "block" : "hidden"
+                className={`absolute lg:relative  top-16 lg:top-0 right-3 lg:right-0 w-auto rounded-md bg-gray-50 p-3 border border-t-gray-100 lg:border-none text-center lg:w-auto lg:bg-transparent lg:flex lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-6 transition-all duration-300 ease-in-out ${
+                  isOpen ? "block dark:bg-gray-900 dark:border-gray-700" : "hidden"
                 }`}
               >
                 {navLinks.map((navLink, index) => (

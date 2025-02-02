@@ -17,7 +17,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   liveDemoLink,
 }) => {
   return (
-    <div className="flex flex-col items-center justify-between w-full h-full p-4 bg-gray-100 border border-gray-300 rounded-lg shadow-lg md:w-full">
+    <div className="flex flex-col items-center justify-between w-full h-full p-4 bg-gray-100 border border-gray-300 rounded-lg shadow-lg md:w-full dark:bg-gray-800 dark:border-gray-700">
       <div className="w-full h-48 mb-4 overflow-hidden rounded-lg">
         <img
           src={imageUrl}
@@ -25,8 +25,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           className="object-cover w-full h-full"
         />
       </div>
-      <h3 className="text-xl font-bold text-gray-800">{projectName}</h3>
-      <p className="mb-4 text-sm text-center text-gray-600">{description}</p>
+      <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100">{projectName}</h3>
+      <p className="mb-4 text-sm text-center text-gray-600 dark:text-gray-300">{description}</p>
       <div className="flex space-x-4">
         <CustomLinkButton href={githubLink} text="Github" />
         <CustomLinkButton href={liveDemoLink} text="Live Demo" />

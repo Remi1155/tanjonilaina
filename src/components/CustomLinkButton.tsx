@@ -27,7 +27,7 @@ const CustomLinkButton: React.FC<LinkButtonProps> = ({
       }}
       target={isDisabled ? undefined : "_blank"} // Empêche l'ouverture dans un nouvel onglet si désactivé
       rel={isDisabled ? undefined : "noopener noreferrer"} // Même chose ici
-      className={`px-4 py-3 my-1 border rounded-full ${bgColor} ${textColor} ${hoverStyle} transition hover:opacity-80 mx-2 text-sm font-semibold ${
+      className={`px-4 py-3 my-1 border rounded-full ${bgColor} ${textColor} ${hoverStyle} transition hover:opacity-80 mx-2 text-sm font-semibold dark:border-gray-700 ${
         isDisabled ? "opacity-50 cursor-not-allowed" : ""
       }`}
     >

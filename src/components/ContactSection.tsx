@@ -8,7 +8,7 @@ import WatsappLogo from "../assets/icons8-whatsapp-30.png"
 const ContactSection: React.FC = () => {
   const socialNetworks = [
     {
-      imageUrl: EmailLogo,
+      imageUrl:EmailLogo,
       name: "Email",
       href: "mailto:xavitanjonilaina2@gmail.com",
     },
@@ -26,10 +26,10 @@ const ContactSection: React.FC = () => {
   ];
   
   return (
-    <section id="contact" className="container w-full py-4 mx-auto bg-gray-50">
+    <section id="contact" className="container w-full py-4 mx-auto bg-gray-50 dark:bg-gray-900">
       <div className="items-center w-[92%] sm:w-4/5 mx-auto text-center md:w-3/4">
         <TitleSection lowerText="Contact me" upperText="Get in touch" />
-        <div className="flex flex-wrap justify-around w-full gap-3 p-4 my-4 bg-gray-100 border border-gray-300 rounded-lg shadow-lg">
+        <div className="flex flex-wrap justify-around w-full gap-3 p-4 my-4 bg-gray-100 border border-gray-300 rounded-lg shadow-lg dark:bg-gray-900 dark:border-gray-700">
           {socialNetworks.map((socialNetwork, index) => (
             <SocialNetwork
               key={index}

@@ -39,7 +39,7 @@ const ExperienceSection: React.FC = () => {
   return (
     <section
       id="experience"
-      className="container w-full py-4 pt-20 mx-auto bg-gray-50 md:pt-24"
+      className="container w-full py-4 pt-20 mx-auto bg-gray-50 md:pt-24 dark:bg-gray-900"
     >
       <div className="items-center w-[92%] sm:w-4/5 mx-auto text-center lg:w-3/4">
         <TitleSection lowerText="Experience" upperText="Explore my" />
