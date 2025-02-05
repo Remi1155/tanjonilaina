@@ -24,7 +24,7 @@ const Header: React.FC = () => {
         {/* Contenu net au-dessus du fond */}
         <div className="relative z-10 flex items-center justify-between w-3/4 py-4 mx-auto">
           <div>
-            <img src={Logo} alt="logo" className="w-28" />
+            <img src={Logo} alt="logo" className="w-28 dark:invert" />
           </div>
           <nav className="flex items-center space-x-6">
             <div>

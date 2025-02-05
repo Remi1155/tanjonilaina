@@ -26,13 +26,13 @@ function WelcomeText() {
       </div>
       <div className="flex justify-center gap-4">
         <a href="https://www.linkedin.com/in/r%C3%A9mi-xavier-tanjonilaina-0958a42b5/">
-          <img src={LinkedinPng} alt="Linkedin png" className="w-10" />
+          <img src={LinkedinPng} alt="Linkedin png" className="w-10 dark:invert" />
         </a>
         <a href="https://github.com/Remi1155">
-          <img src={GithubPng} alt="Github png" className="w-10" />
+          <img src={GithubPng} alt="Github png" className="w-10 dark:invert" />
         </a>
         <a href="https://wa.me/+261337196003">
-          <img src={WatsappPng} alt="Watsapp png" className="w-10" />
+          <img src={WatsappPng} alt="Watsapp png" className="w-10 dark:invert" />
         </a>
       </div>
     </div>
