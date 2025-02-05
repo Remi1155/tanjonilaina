@@ -4,7 +4,7 @@ import WelcomeText from "./WelcomeText";
 
 const WelcomeSection: React.FC = () => {
   const [darkMode, setDarkMode] = useState(
-    localStorage.getItem("theme") === "dark"
+    localStorage.getItem("theme") === "dark" || localStorage.getItem("theme") === null
   );
   useEffect(() => {
     if (darkMode) {
