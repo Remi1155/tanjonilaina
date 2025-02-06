@@ -20,8 +20,8 @@ const SkillCard: React.FC<SkillCardProps> = ({
           <div key={index} className="flex items-center mr-2">
             <img src={CheckMark} alt="Icon" className="w-6 h-6 mr-0 min-[350px]:mr-1 min-[400px]:mr-3 dark:invert" />
             <div className="text-left">
-              <p className="font-semibold text-gray-800 dark:text-gray-200">{tech}</p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">{levels[index]}</p>
+              <p className="font-semibold text-gray-800 dark:invert">{tech}</p>
+              <p className="text-sm text-gray-600 dark:invert">{levels[index]}</p>
             </div>
           </div>
         ))}

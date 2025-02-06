@@ -18,12 +18,15 @@ const WelcomeSection: React.FC = () => {
 
   return (
     <div className="container relative flex flex-col items-center justify-center w-full mx-auto bg-gray-50 dark:bg-gray-900">
+      <div className="container fixed flex justify-end mx-auto bg-transparent bg-gray-200 rounded top-20 lg:top-24 p-fit">
       <button
         onClick={() => setDarkMode(!darkMode)}
-        className="absolute px-4 py-2 bg-gray-200 rounded lg:top-24 right-2 top-20 dark:bg-gray-700 dark:text-white"
+        className="px-4 py-2 mr-2 bg-gray-200 rounded dark:bg-gray-700 dark:text-white"
       >
         {darkMode ? "☀️" : "🌙"}
       </button>
+      </div>
+      
       <section className="flex flex-col items-center justify-center gap-3 pt-20 md:gap-5 md:pt-24 md:flex-row md:justify-between lg:pt-32 md:w-2/3 md:my-10 xl:gap-16">
         <WelcomeImage />
         <WelcomeText />
