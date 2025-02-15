@@ -1,25 +1,27 @@
 import { useForm, ValidationError } from "@formspree/react";
-import React from "react";
+import { useState } from "react";
 import toast from "react-hot-toast";
 
 export function ContactForm() {
   const [state, handleSubmit] = useForm("mvgzwrgr");
+  const [hasSubmitted, setHasSubmitted] = useState(false); // Nouveau state
 
-  const notify = () => toast.success('Message sent successfully!');
-  const notifySending = () => toast.loading('Sending message...');
-
-  const onSubmit = async (e) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    notifySending(); 
+
     try {
-        await handleSubmit(e);
-        if (state.succeeded) {
-            notify(); 
-        }
-    } catch (error) {
-        toast.error('Failed to send message.')
+      await handleSubmit(e);
+      if (state.succeeded && !hasSubmitted) { // Vérifiez hasSubmitted
+        toast.success("Message sent successfully");
+        setHasSubmitted(true); // Mettez hasSubmitted à true
+      } else if (!state.succeeded) {
+        toast.error("Failed to send message."); // Toast en cas d'erreur
+      }
+    } catch {
+      toast.error("Failed to send message."); // Toast en cas d'erreur
     }
   };
+
 
   return (
     <div className=" lg:w-1/2 w-full p-6">
@@ -73,6 +75,7 @@ export function ContactForm() {
           className="bg-gray-400 dark:bg-blue-600 dark:text-white py-2 px-4 rounded-md font-medium dark:hover:bg-blue-700 transition disabled:opacity-50"
         >
           Submit
+          {/* {state.submitting ? "Sending..." : "Submit"} */}
         </button>
       </form>
     </div>
