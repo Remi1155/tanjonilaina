@@ -1,21 +1,31 @@
 import { useForm, ValidationError } from "@formspree/react";
+import React from "react";
+import toast from "react-hot-toast";
 
 export function ContactForm() {
   const [state, handleSubmit] = useForm("mvgzwrgr");
 
-  if (state.succeeded) {
-    return (
-      <p className="text-green-500 text-center text-lg font-semibold">
-        Thanks for your message!
-      </p>
-    );
-  }
+  const notify = () => toast.success('Message sent successfully!');
+  const notifySending = () => toast.loading('Sending message...');
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    notifySending(); 
+    try {
+        await handleSubmit(e);
+        if (state.succeeded) {
+            notify(); 
+        }
+    } catch (error) {
+        toast.error('Failed to send message.')
+    }
+  };
 
   return (
     <div className=" lg:w-1/2 w-full p-6">
-      <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
+      <form onSubmit={onSubmit} className="flex flex-col space-y-4">
         {/* Name Field */}
-        <label htmlFor="name" className="dark:text-gray-300">
+        <label htmlFor="name" className="dark:text-gray-300 text-start">
           Name
         </label>
         <input
@@ -27,7 +37,7 @@ export function ContactForm() {
         />
 
         {/* Email Field */}
-        <label htmlFor="email" className="dark:text-gray-300">
+        <label htmlFor="email" className="dark:text-gray-300 text-start">
           Email Address
         </label>
         <input
@@ -40,7 +50,7 @@ export function ContactForm() {
         <ValidationError prefix="Email" field="email" errors={state.errors} />
 
         {/* Message Field */}
-        <label htmlFor="message" className="dark:text-gray-300">
+        <label htmlFor="message" className="dark:text-gray-300 text-start">
           Message
         </label>
         <textarea
@@ -62,7 +72,7 @@ export function ContactForm() {
           disabled={state.submitting}
           className="bg-gray-400 dark:bg-blue-600 dark:text-white py-2 px-4 rounded-md font-medium dark:hover:bg-blue-700 transition disabled:opacity-50"
         >
-          {state.submitting ? "Sending..." : "Submit"}
+          Submit
         </button>
       </form>
     </div>

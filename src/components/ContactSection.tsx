@@ -36,7 +36,7 @@ const ContactSection: React.FC = () => {
         <TitleSection lowerText="Contact me" upperText="Get in touch" />
         <div className="flex flex-col lg:flex-row justify-between w-full gap-3 p-4 my-4 bg-gray-100 border border-gray-300 rounded-lg shadow-lg dark:bg-gray-900 dark:border-gray-700">
           <ContactForm />
-          <div className="flex justify-around lg:flex-col lg:justify-start px-6 py-14 lg:gap-5 lg:w-1/2">
+          <div className="flex justify-around lg:flex-col lg:justify-start px-6 lg:py-14 lg:gap-5 lg:w-1/2">
             {socialNetworks.map((socialNetwork, index) => (
               <SocialNetwork
                 key={index}
