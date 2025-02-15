@@ -1,31 +1,42 @@
 import { useForm, ValidationError } from "@formspree/react";
-import { useState } from "react";
 import toast from "react-hot-toast";
+import { useState, useEffect } from "react";
 
 export function ContactForm() {
   const [state, handleSubmit] = useForm("mvgzwrgr");
-  const [hasSubmitted, setHasSubmitted] = useState(false); // Nouveau state
+  const [messageShown, setMessageShown] = useState(false);
 
-  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    try {
-      await handleSubmit(e);
-      if (state.succeeded && !hasSubmitted) { // Vérifiez hasSubmitted
-        toast.success("Message sent successfully");
-        setHasSubmitted(true); // Mettez hasSubmitted à true
-      } else if (!state.succeeded) {
-        toast.error("Failed to send message."); // Toast en cas d'erreur
-      }
-    } catch {
-      toast.error("Failed to send message."); // Toast en cas d'erreur
+  useEffect(() => {
+    if (state.succeeded && !messageShown) {
+      toast.success("Message sent successfully");
+      setMessageShown(true);
     }
-  };
+  }, [state.succeeded, messageShown]);
 
+
+  // if (state.succeeded) {
+  //   toast.success("Message sent successfully")
+  // }
+
+  // Réinitialiser les champs après la soumission
+  useEffect(() => {
+    if (state.succeeded) {
+      // Vérification que les éléments existent avant de les réinitialiser
+      const nameField = document.getElementById("name") as HTMLInputElement;
+      const emailField = document.getElementById("email")as HTMLInputElement;
+      const messageField = document.getElementById("message") as HTMLInputElement;
+
+      if (nameField && emailField && messageField) {
+        nameField.value = "";
+        emailField.value = "";
+        messageField.value = "";
+      }
+    }
+  }, [state.succeeded]);
 
   return (
-    <div className=" lg:w-1/2 w-full p-6">
-      <form onSubmit={onSubmit} className="flex flex-col space-y-4">
+    <div className="lg:w-1/2 w-full p-6">
+      <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
         {/* Name Field */}
         <label htmlFor="name" className="dark:text-gray-300 text-start">
           Name
@@ -74,8 +85,7 @@ export function ContactForm() {
           disabled={state.submitting}
           className="bg-gray-400 dark:bg-blue-600 dark:text-white py-2 px-4 rounded-md font-medium dark:hover:bg-blue-700 transition disabled:opacity-50"
         >
-          Submit
-          {/* {state.submitting ? "Sending..." : "Submit"} */}
+          {state.submitting ? "Sending..." : "Submit"}
         </button>
       </form>
     </div>
