@@ -14,10 +14,6 @@ export function ContactForm() {
   }, [state.succeeded, messageShown]);
 
 
-  // if (state.succeeded) {
-  //   toast.success("Message sent successfully")
-  // }
-
   // Réinitialiser les champs après la soumission
   useEffect(() => {
     if (state.succeeded) {
