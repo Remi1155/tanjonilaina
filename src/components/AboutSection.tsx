@@ -32,7 +32,7 @@ const AboutSection: React.FC = () => {
       className="container flex flex-col justify-center w-full pt-20 mx-auto dark:text-gray-200 dark:bg-gray-900 bg-gray-50 md:pt-24"
     >
       <TitleSection lowerText="About me" upperText="Get to know more" />
-      <div className="flex flex-col items-center w-[92%] md:w-4/5 mx-auto mt-10 lg:w-3/4 lg:flex-row lg:justify-between">
+      <div className="flex flex-col items-center w-[92%] md:w-4/5 mx-auto lg:w-3/4 lg:flex-row lg:justify-between 2xl:justify-around">
         <div className="overflow-hidden rounded-3xl">
           <img
             src={AboutPic}
@@ -51,7 +51,7 @@ const AboutSection: React.FC = () => {
               />
             ))}
           </div>
-          <p className="text-justify">
+          <p className="text-justify mt-9 2xl:mt-12">
             I am a passionate web developer currently in my 4th year of Computer
             Science. As a junior full-stack developer, I enjoy creating
             efficient and user-friendly solutions, blending creativity with

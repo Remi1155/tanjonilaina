@@ -3,12 +3,12 @@ import "./index.css";
 import Header from "./components/Header";
 import WelcomeSection from "./components/WelcomeSection";
 import AboutSection from "./components/AboutSection";
-import ExperienceSection from "./components/ExperienceSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import React from "react";
 import { Toaster } from "react-hot-toast";
+import Skills from "./components/Skills";
 
 export default function App() {
   return (
@@ -18,7 +18,7 @@ export default function App() {
       <main className="w-full">
         <WelcomeSection />
         <AboutSection />
-        <ExperienceSection />
+        <Skills />
         <ProjectsSection />
         <ContactSection />
       </main>
