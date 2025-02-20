@@ -16,7 +16,7 @@ const Header: React.FC = () => {
       {/* Le conteneur global */}
       <div className="relative">
         {/* Contexte de flou uniquement pour le fond */}
-        <div className="container absolute inset-0 mx-auto bg-gray-100 dark:bg-gray-950 dark:bg-opacity-60 bg-opacity-60 dark:backdrop-blur-md backdrop-blur-md"></div>
+        <div className="container absolute inset-0 mx-auto bg-gray-100 dark:bg-gray-950 dark:bg-opacity-20 bg-opacity-20 dark:backdrop-blur-md backdrop-blur-md"></div>
         {/* Contenu net au-dessus du fond */}
         <div className="relative z-10 flex items-center justify-between w-3/4 py-4 mx-auto">
           <div>
