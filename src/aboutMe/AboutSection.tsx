@@ -1,30 +1,12 @@
 import React from "react";
-import TitleSection from "./TitleSection";
-import AboutMeCard from "./AboutMeCard";
+import TitleSection from "../components/TitleSection";
+import AboutMeCard from "../components/AboutMeCard";
 import AboutPic from "../assets/sary_tapaka_bg_gray_200.jpg";
-import ExperienceLogo from "../assets/experience.png";
-import EducationLogo from "../assets/education.png";
+import { data } from "../data/data";
 
 const AboutSection: React.FC = () => {
-  const data = [
-    {
-      title: "Experience",
-      logo: ExperienceLogo,
-      items: [
-        "1 year of Frontend Development",
-        "1 year of Backend Development",
-      ],
-    },
-    {
-      title: "Education",
-      logo: EducationLogo,
-      items: [
-        "B.Sc. Mathematics",
-        "B.Sc. Computer Science",
-        "M.Sc. Computer Science (1st year)",
-      ],
-    },
-  ];
+  
+  const myData = data.aboutMe
 
   return (
     <section
@@ -42,7 +24,7 @@ const AboutSection: React.FC = () => {
         </div>
         <div className="mt-4 lg:w-1/2">
           <div className="flex flex-col items-center justify-center gap-4 mt-8 mb-4 lg:mt-0 md:flex-row md:gap-8 md:h-60">
-            {data.map((i, index) => (
+            {myData.map((i, index) => (
               <AboutMeCard
                 key={index}
                 title={i.title}

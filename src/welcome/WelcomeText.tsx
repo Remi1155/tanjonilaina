@@ -1,8 +1,8 @@
 import GithubPng from "../assets/github.png";
 import LinkedinPng from "../assets/linkedin.png";
-import CustomLinkButton from "./CustomLinkButton";
 import WatsappPng from "../assets/icons8-whatsapp-30.png"
 import cv from "../assets/CV.pdf"
+import CustomLinkButton from "../components/CustomLinkButton";
 
 function WelcomeText() {
   return (

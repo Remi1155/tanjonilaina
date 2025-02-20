@@ -1,14 +1,14 @@
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import Header from "./components/Header";
-import WelcomeSection from "./components/WelcomeSection";
-import AboutSection from "./components/AboutSection";
-import ProjectsSection from "./components/ProjectsSection";
-import ContactSection from "./components/ContactSection";
-import Footer from "./components/Footer";
+import WelcomeSection from "./welcome/WelcomeSection";
+import AboutSection from "./aboutMe/AboutSection";
+import ProjectsSection from "./projects/ProjectsSection";
+import ContactSection from "./contact/ContactSection";
+import Footer from "./footer/Footer";
 import React from "react";
 import { Toaster } from "react-hot-toast";
-import Skills from "./components/Skills";
+import Skills from "./skills/Skills";
+import Header from "./header/Header";
 
 export default function App() {
   return (

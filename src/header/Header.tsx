@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Logo from "../assets/logo_4.png";
+import { data } from "../data/data";
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,12 +9,7 @@ const Header: React.FC = () => {
     setIsOpen(!isOpen);
   };
 
-  const navLinks = [
-    { href: "#about", label: "About" },
-    { href: "#skills", label: "Skills" },
-    { href: "#projects", label: "Projects" },
-    { href: "#contact", label: "Contact" },
-  ];
+  const navLinks = data.navLinks
 
   return (
     <header className="fixed z-50 w-full">

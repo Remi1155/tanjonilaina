@@ -1,31 +1,11 @@
 import React from "react";
-import TitleSection from "./TitleSection";
-import LinkdinLogo from "../assets/linkedin.png";
-import EmailLogo from "../assets/email.png";
-import SocialNetwork from "./SocialNetwork";
-import WatsappLogo from "../assets/icons8-whatsapp-30.png";
+import TitleSection from "../components/TitleSection";
+import SocialNetwork from "../components/SocialNetwork";
 import { ContactForm } from "./ContactForm";
-// import ContactForm from "./ContactForm";
+import { data } from "../data/data";
 
 const ContactSection: React.FC = () => {
-  const socialNetworks = [
-    {
-      imageUrl: EmailLogo,
-      name: "Email",
-      href: "mailto:xavitanjonilaina2@gmail.com",
-    },
-    {
-      imageUrl: WatsappLogo,
-      name: "Watsapp",
-      href: "https://wa.me/+261337196003",
-    },
-
-    {
-      imageUrl: LinkdinLogo,
-      name: "Linkedin",
-      href: "https://www.linkedin.com/in/r%C3%A9mi-xavier-tanjonilaina-0958a42b5/",
-    },
-  ];
+  const socialNetworks = data.socialNetworks;
 
   return (
     <section
