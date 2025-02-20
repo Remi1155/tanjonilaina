@@ -4,7 +4,7 @@ import Project2Img from "../assets/project-2.png";
 import Project3Img from "../assets/project-3.png";
 import ProjectManageImg from "../assets/projet_manage.png";
 import EmailLogo from "../assets/email.png";
-import LinkdinLogo from "../assets/linkedin.png";
+import LinkdinLogo from "../assets/linkedin-2.png";
 import WatsappLogo from "../assets/icons8-whatsapp-30.png";
 
 export const data = {
