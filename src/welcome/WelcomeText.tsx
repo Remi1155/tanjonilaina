@@ -1,4 +1,4 @@
-import GithubPng from "../assets/github.png";
+import GithubPng from "../assets/github-5.png";
 import LinkedinPng from "../assets/linkedin-2.png";
 import WatsappPng from "../assets/icons8-whatsapp-30.png"
 import cv from "../assets/CV.pdf"
