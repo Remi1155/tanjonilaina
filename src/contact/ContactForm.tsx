@@ -34,7 +34,7 @@ export function ContactForm() {
     <div className="lg:w-1/2 w-full p-6">
       <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
         {/* Name Field */}
-        <label htmlFor="name" className="dark:text-gray-300 text-start">
+        <label htmlFor="name" className="dark:text-gray-300 text-sm min-[400px]:text-base text-start">
           Name
         </label>
         <input
@@ -42,11 +42,11 @@ export function ContactForm() {
           type="text"
           name="name"
           required
-          className="p-3 rounded-md bg-gray-50 dark:bg-[#1F2937] dark:text-white border border-gray-300 dark:border-gray-600"
+          className="p-1 min-[400px]:p-3 rounded-md bg-gray-50 dark:bg-[#1F2937] dark:text-white border border-gray-300 dark:border-gray-600"
         />
 
         {/* Email Field */}
-        <label htmlFor="email" className="dark:text-gray-300 text-start">
+        <label htmlFor="email" className="dark:text-gray-300 text-sm min-[400px]:text-base text-start">
           Email Address
         </label>
         <input
@@ -54,12 +54,12 @@ export function ContactForm() {
           type="email"
           name="email"
           required
-          className="p-3 rounded-md bg-gray-50 dark:bg-[#1F2937] dark:text-white border border-gray-300 dark:border-gray-600"
+          className="p-1 min-[400px]:p-3 rounded-md bg-gray-50 dark:bg-[#1F2937] dark:text-white border border-gray-300 dark:border-gray-600"
         />
         <ValidationError prefix="Email" field="email" errors={state.errors} />
 
         {/* Message Field */}
-        <label htmlFor="message" className="dark:text-gray-300 text-start">
+        <label htmlFor="message" className="dark:text-gray-300 text-sm min-[400px]:text-base text-start">
           Message
         </label>
         <textarea
@@ -67,7 +67,7 @@ export function ContactForm() {
           name="message"
           required
           rows={4}
-          className="p-3 rounded-md bg-gray-50 dark:bg-[#1F2937] dark:text-white border border-gray-300 dark:border-gray-600"
+          className="p-1 min-[400px]:p-3 rounded-md bg-gray-50 dark:bg-[#1F2937] dark:text-white border border-gray-300 dark:border-gray-600"
         />
         <ValidationError
           prefix="Message"
@@ -79,7 +79,7 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={state.submitting}
-          className="bg-gray-400 dark:bg-blue-600 dark:text-white py-2 px-4 rounded-md font-medium dark:hover:bg-blue-700 transition disabled:opacity-50"
+          className="bg-gray-400 dark:bg-blue-500 dark:text-white py-2 px-4 text-sm min-[400px]:text-base rounded-md font-medium dark:hover:bg-blue-700 transition disabled:opacity-50"
         >
           {state.submitting ? "Sending..." : "Submit"}
         </button>

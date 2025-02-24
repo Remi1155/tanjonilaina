@@ -10,7 +10,7 @@ const ContactSection: React.FC = () => {
   return (
     <section
       id="contact"
-      className="container w-full py-4 mx-auto bg-gray-50 dark:bg-gray-900"
+      className="container w-full py-4 pt-7 mx-auto min-[400px]:pt-20 bg-gray-50 dark:bg-gray-900"
     >
       <div className="items-center w-[92%] sm:w-4/5 mx-auto text-center md:w-3/4">
         <TitleSection lowerText="Contact me" upperText="Get in touch" />

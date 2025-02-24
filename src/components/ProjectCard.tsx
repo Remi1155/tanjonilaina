@@ -25,7 +25,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           className="object-cover w-full h-full"
         />
       </div>
-      <h3 className="text-xl font-bold text-gray-800 dark:invert">{projectName}</h3>
+      <h3 className="min-[400px]:text-xl font-bold text-gray-800 dark:invert">{projectName}</h3>
       <p className="mb-4 text-sm text-center text-gray-600 dark:invert">{description}</p>
       <div className="flex space-x-4">
         <CustomLinkButton href={githubLink} text="Github" />

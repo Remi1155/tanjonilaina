@@ -9,7 +9,7 @@ const Skills: React.FC = () => {
   return (
     <section
       id="skills"
-      className="container w-full py-4 pt-20 mx-auto bg-gray-50 md:pt-24 dark:bg-gray-900"
+      className="container w-full py-4 pt-7 mx-auto bg-gray-50 min-[400px]:pt-20 dark:bg-gray-900"
     >
       <div className="items-center w-[92%] sm:w-4/5 mx-auto text-center lg:w-3/4">
         <TitleSection lowerText="Skills" upperText="My Technical" />
