@@ -10,6 +10,7 @@ import cerIntroToJS from "../assets/cer_into_to_javascript.jpg";
 import cerIntroToSQL from "../assets/cer_intro_to_sql.jpg";
 import cerIntermediateJava from "../assets/cer_java_intermediate.jpg";
 import cerIntroToJava from "../assets/cer_intro_to_java.png";
+import cerIntroToSQLHackerRank from "../assets/cer_sql_basique_hackerrank.png";
 
 
 export const data = {
@@ -129,6 +130,12 @@ export const data = {
       issuer: "Sololearn.com",
       linkTo: "https://www.sololearn.com/certificates/CC-G9MFXTET",
       image: cerIntermediateJava,
+    },
+    {
+      title: "SQL Basic",
+      issuer: "Hackerrank.com",
+      linkTo: "https://www.hackerrank.com/certificates/8b78fef50e55",
+      image: cerIntroToSQLHackerRank,
     },
     {
       title: "Introduction to Javascript",

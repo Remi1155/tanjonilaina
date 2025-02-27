@@ -65,14 +65,14 @@ const Header: React.FC = () => {
 
               <ul
                 className={`absolute lg:relative  top-16 lg:top-0 right-3 lg:right-0 w-auto rounded-md bg-gray-50 p-3 border border-t-gray-100 lg:border-none text-center lg:w-auto lg:bg-transparent lg:flex lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-6 transition-all duration-300 ease-in-out ${
-                  isOpen ? "block dark:bg-gray-900 dark:border-gray-500" : "hidden"
+                  isOpen ? "block dark:bg-transparent dark:border-gray-500" : "hidden"
                 }`}
               >
                 {navLinks.map((navLink, index) => (
                   <li key={index}>
                     <a
                       href={navLink.href}
-                      className="min-[400px]:text-xl font-medium lg:font-semibold hover:text-gray-500 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-gray-500 after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full dark:text-gray-200"
+                      className="min-[400px]:text-xl font-medium lg:font-normal hover:text-gray-500 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-gray-500 after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full dark:text-gray-200"
                       onClick={toggleMenu}
                     >
                       {navLink.label}
