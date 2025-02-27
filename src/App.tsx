@@ -9,6 +9,7 @@ import React from "react";
 import { Toaster } from "react-hot-toast";
 import Skills from "./skills/Skills";
 import Header from "./header/Header";
+import Certification from "./certification/Certification";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <AboutSection />
         <Skills />
         <ProjectsSection />
+        <Certification />
         <ContactSection />
       </main>
       <Footer />

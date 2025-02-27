@@ -6,6 +6,11 @@ import ProjectManageImg from "../assets/projet_manage.png";
 import EmailLogo from "../assets/email.png";
 import LinkdinLogo from "../assets/linkedin-2.png";
 import WatsappLogo from "../assets/icons8-whatsapp-30.png";
+import cerIntroToJS from "../assets/cer_into_to_javascript.jpg";
+import cerIntroToSQL from "../assets/cer_intro_to_sql.jpg";
+import cerIntermediateJava from "../assets/cer_java_intermediate.jpg";
+import cerIntroToJava from "../assets/cer_intro_to_java.png";
+
 
 export const data = {
   navLinks: [
@@ -13,6 +18,7 @@ export const data = {
     { href: "#skills", label: "Skills" },
     { href: "#projects", label: "Projects" },
     { href: "#contact", label: "Contact" },
+    { href: "#certifications", label: "Certifications" },
   ],
 
   aboutMe: [
@@ -108,6 +114,33 @@ export const data = {
       imageUrl: LinkdinLogo,
       name: "Linkedin",
       href: "https://www.linkedin.com/in/r%C3%A9mi-xavier-tanjonilaina-0958a42b5/",
+    },
+  ],
+
+  certifications: [
+    {
+      title: "Introduction to Java",
+      issuer: "Sololearn.com",
+      linkTo: "https://www.sololearn.com/certificates/CC-BK3YRESN",
+      image: cerIntroToJava,
+    },
+    {
+      title: "Java intermediate",
+      issuer: "Sololearn.com",
+      linkTo: "https://www.sololearn.com/certificates/CC-G9MFXTET",
+      image: cerIntermediateJava,
+    },
+    {
+      title: "Introduction to Javascript",
+      issuer: "Sololearn.com",
+      linkTo: "https://www.sololearn.com/certificates/CC-6GFMREDU",
+      image: cerIntroToJS,
+    },
+    {
+      title: "Introduction to SQL",
+      issuer: "Sololearn.com",
+      linkTo: "https://www.sololearn.com/certificates/CC-WHVJYVSB",
+      image: cerIntroToSQL,
     },
   ],
 };
