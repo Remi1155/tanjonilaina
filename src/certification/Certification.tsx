@@ -13,7 +13,8 @@ function Certification() {
     if (isTransitioning) return;
     setIsTransitioning(true);
     setCurrentIndex((prevIndex) =>
-      prevIndex === certifications.length - 1 ? 0 : prevIndex + 1
+      // prevIndex === certifications.length ? 0 : prevIndex + 1
+      (prevIndex + 1) % certifications.length
     );
     setTimeout(() => setIsTransitioning(false), 500);
   };
@@ -31,6 +32,7 @@ function Certification() {
     const interval = setInterval(next, 3000);
     return () => clearInterval(interval);
   });
+
 
   return (
     <section
@@ -97,6 +99,18 @@ function Certification() {
           >
             <ChevronRight className="w-6 h-6" />
           </button>
+        </div>
+
+        <div className="flex justify-center gap-2 mt-8">
+          {certifications.map((_, index) => (
+            <button
+              key={index}
+              className={`w-2 h-2 rounded-full transition-colors ${
+                index === currentIndex ? "bg-blue-500" : "bg-gray-600"
+              }`}
+              onClick={() => setCurrentIndex(index)}
+            />
+          ))}
         </div>
       </div>
     </section>
