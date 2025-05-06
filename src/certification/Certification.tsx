@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import TitleSection from "../components/TitleSection";
 import { data } from "../data/data";
@@ -28,10 +28,10 @@ function Certification() {
     setTimeout(() => setIsTransitioning(false), 500);
   };
 
-  useEffect(() => {
-    const interval = setInterval(next, 3000);
-    return () => clearInterval(interval);
-  });
+  // useEffect(() => {
+  //   const interval = setInterval(next, 3000);
+  //   return () => clearInterval(interval);
+  // });
 
 
   return (
