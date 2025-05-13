@@ -14,12 +14,11 @@ const Skills: React.FC = () => {
       <div className="items-center w-[92%] sm:w-4/5 mx-auto text-center lg:w-3/4">
         <TitleSection lowerText="Skills" upperText="My Technical" />
         <div className="flex flex-col justify-between gap-4 mt-4 text-lg md:text-xl md:flex-row">
-          {mySkills.map((i, index) => (
+          {mySkills.map((skill, index) => (
             <SkillCard
               key={index}
-              title={i.title}
-              technologies={i.technologies}
-              levels={i.levels}
+              title={skill.title}
+              contenu={skill.contenu}
             />
           ))}
         </div>

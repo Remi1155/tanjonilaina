@@ -12,9 +12,10 @@ function Certification() {
   const next = () => {
     if (isTransitioning) return;
     setIsTransitioning(true);
-    setCurrentIndex((prevIndex) =>
-      // prevIndex === certifications.length ? 0 : prevIndex + 1
-      (prevIndex + 1) % certifications.length
+    setCurrentIndex(
+      (prevIndex) =>
+        // prevIndex === certifications.length ? 0 : prevIndex + 1
+        (prevIndex + 1) % certifications.length
     );
     setTimeout(() => setIsTransitioning(false), 500);
   };
@@ -32,7 +33,6 @@ function Certification() {
   //   const interval = setInterval(next, 3000);
   //   return () => clearInterval(interval);
   // });
-
 
   return (
     <section
@@ -85,8 +85,12 @@ function Certification() {
                     <div className="absolute inset-0 dark:bg-gradient-to-t dark:from-gray-900/90 dark:to-transparent" />
                   </div>
                   <div className="px-6">
-                    <h3 className="min-[400px]:text-xl font-bold text-gray-800 dark:invert">{cert.title}</h3>
-                    <p className="mb-4 text-sm text-gray-600 dark:invert">{cert.issuer}</p>
+                    <h3 className="min-[400px]:text-xl font-bold text-gray-800 dark:invert">
+                      {cert.title}
+                    </h3>
+                    <p className="mb-4 text-sm text-gray-600 dark:invert">
+                      {cert.issuer}
+                    </p>
                   </div>
                 </a>
               ))}
@@ -101,7 +105,7 @@ function Certification() {
           </button>
         </div>
 
-        <div className="flex justify-center gap-2 mt-8">
+        <div className="flex justify-center gap-2 mt-8 min-[600px]:hidden">
           {certifications.map((_, index) => (
             <button
               key={index}

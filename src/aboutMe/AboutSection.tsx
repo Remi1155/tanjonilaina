@@ -1,7 +1,7 @@
 import React from "react";
 import TitleSection from "../components/TitleSection";
 import AboutMeCard from "../components/AboutMeCard";
-import AboutPic from "../assets/sary_tapaka_bg_gray_200.jpg";
+import AboutPic from "../assets/IMG_20241208_065638.jpg";
 import { data } from "../data/data";
 
 const AboutSection: React.FC = () => {
@@ -15,11 +15,11 @@ const AboutSection: React.FC = () => {
     >
       <TitleSection lowerText="About me" upperText="Get to know more" />
       <div className="flex flex-col items-center w-[92%] mx-auto lg:flex-row lg:justify-between 2xl:justify-around">
-        <div className="overflow-hidden rounded-3xl mt-4 min-[400px]:mt-0">
+        <div className="overflow-hidden rounded-lg sm:rounded-3xl mt-4 min-[400px]:mt-0">
           <img
             src={AboutPic}
             alt="Image 2"
-            className="object-cover w-36 h-36 min-[400px]:w-48 min-[400px]:h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 min-[1300px]::w-96 min-[1300px]::h-96 max-w-full"
+            className="object-cover w-[400px] h-36 min-[400px]:w-48 min-[400px]:h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 min-[1300px]::w-96 min-[1300px]::h-96 max-w-full"
           />
         </div>
         <div className="mt-4 lg:w-1/2">
