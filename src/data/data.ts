@@ -1,7 +1,7 @@
 import ExperienceLogo from "../assets/experience.png";
 import EducationLogo from "../assets/education.png";
-import Project2Img from "../assets/project-2.png";
-import Project3Img from "../assets/project-3.png";
+import TitanicImg from "../assets/titanic.png";
+import AuthImg from "../assets/authImg.png";
 import ProjectManageImg from "../assets/projet_manage.png";
 import EmailLogo from "../assets/email.png";
 import LinkdinLogo from "../assets/linkedin-2.png";
@@ -12,10 +12,9 @@ import cerIntermediateJava from "../assets/cer_java_intermediate.jpg";
 import cerIntroToJava from "../assets/cer_intro_to_java.png";
 import cerIntroToSQLHackerRank from "../assets/cer_sql_basique_hackerrank.png";
 
-
 export const data = {
   navLinks: [
-    { href: "#about", label: "About" },
+    { href: "#about", label: "About me" },
     { href: "#skills", label: "Skills" },
     { href: "#projects", label: "Projects" },
     { href: "#contact", label: "Contact" },
@@ -48,6 +47,7 @@ export const data = {
       technologies: [
         "ReactJs",
         "Redux",
+        "Angular",
         "TailwindCss",
         "TypeScript",
         "MaterialUI",
@@ -55,6 +55,7 @@ export const data = {
       ],
       levels: [
         "Intermediate",
+        "Basic",
         "Basic",
         "Intermediate",
         "Basic",
@@ -64,8 +65,16 @@ export const data = {
     },
     {
       title: "Backend Development",
-      technologies: ["NestJS", "PostgreSQL", "PHP", "MySQL", "NodeJS"],
+      technologies: [
+        "NodeJS",
+        "NestJS",
+        "PostgreSQL",
+        "PHP",
+        "MySQL",
+        "PostgreSQL",
+      ],
       levels: [
+        "Intermediate",
         "Intermediate",
         "Basic",
         "Intermediate",
@@ -77,24 +86,26 @@ export const data = {
 
   projects: [
     {
+      imageUrl: TitanicImg,
+      projectName: "Titanic Dashboard",
+      description:
+        "An interactive data visualization dashboard built with React and Rechart.js, offering dynamic charts and insights based on the Titanic dataset.",
+      githubLink: "https://github.com/Remi1155/titanic-dashboard.git",
+      liveDemoLink: "#",
+    },
+    {
+      imageUrl: AuthImg,
+      projectName: "NestJs Authentification",
+      description: "Authentification with NestJs and Json Web Token",
+      githubLink: "https://github.com/Remi1155/nest-js-authentification.git",
+      liveDemoLink: "#",
+    },
+    {
       imageUrl: ProjectManageImg,
       projectName: "Manage-landing-page",
-      description: "A fully responsive landing page template created with React and TypeScript.",
+      description:
+        "A fully responsive landing page template created with React and TypeScript.",
       githubLink: "https://github.com/Remi1155/Manage-landing-page",
-      liveDemoLink: "#",
-    },
-    {
-      imageUrl: Project2Img,
-      projectName: "Project Two",
-      description: "Stay focused with smart reminders.",
-      githubLink: "#",
-      liveDemoLink: "#",
-    },
-    {
-      imageUrl: Project3Img,
-      projectName: "Project Three",
-      description: "Discover and order your favorite meals.",
-      githubLink: "#",
       liveDemoLink: "#",
     },
   ],
